@@ -12,4 +12,8 @@
 ./asc2bin.exe normx.txt NORMX.BIN A000
 ./asc2bin.exe normy.txt NORMY.BIN A000
 ./vgm2x16opm.exe ChaseVaultTheme.vgm MUSIC.BIN A000
+dd if=NORMY.BIN skip=1 bs=2 >> NORMX.BIN
+dd if=MUSIC.BIN skip=1 bs=2 >> NORMX.BIN
+rm NORMY.BIN
+rm MUSIC.BIN
 ./vgm2x16opm.exe ChaseVaultWin.vgm WINMUSIC.BIN A000

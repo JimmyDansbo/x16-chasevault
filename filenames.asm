@@ -17,7 +17,7 @@ normy_fn:      .asciiz "normy.bin"
 music_fn:      .asciiz "music.bin"
 win_music_fn:  .asciiz "winmusic.bin"
 end_filenames:
-FILES_TO_LOAD = 5
+FILES_TO_LOAD = 3
 bankparams:
 .byte BITMAP_BANK                ; bank
 .byte normx_fn-bm_filename-1     ; filename length
@@ -25,12 +25,12 @@ bankparams:
 .byte NORMX_BANK
 .byte normy_fn-normx_fn-1
 .word normx_fn
-.byte NORMY_BANK
-.byte music_fn-normy_fn-1
-.word normy_fn
-.byte GAME_MUSIC_BANK
-.byte win_music_fn-music_fn-1
-.word music_fn
+;.byte NORMY_BANK
+;.byte music_fn-normy_fn-1
+;.word normy_fn
+;.byte GAME_MUSIC_BANK
+;.byte win_music_fn-music_fn-1
+;.word music_fn
 .byte WIN_MUSIC_BANK
 .byte end_filenames-win_music_fn-1
 .word win_music_fn
